@@ -10,3 +10,5 @@ Welcome to the BetterDynAdmin wiki!
 * Rest MVC Services
 
 * Pipelines
+
+* [Dash](Dash)
