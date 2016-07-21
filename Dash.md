@@ -1,6 +1,19 @@
 #DASH - DynAdmin SHell
 
-WIP!!
+Table of Contents
+=================
+
+  * [DASH - DynAdmin SHell](#dash---dynadmin-shell)
+    * [Start Dash](#start-dash)
+    * [Navigation](#navigation)
+      * [Console](#console)
+      * [Editor](#editor)
+    * [Component Reference:](#component-reference)
+    * [Saving a result to a variable](#saving-a-result-to-a-variable)
+    * [Result filtering](#result-filtering)
+      * [Single value:](#single-value)
+      * [Multiple Values](#multiple-values)
+    * [Functions](#functions)
 
 ## Start Dash
 
@@ -77,7 +90,7 @@ Ex:
 
 You can save part of a result to a variable. There are two ways : either save a single value, or a set:
 
-### 1: Single value:
+### Single value:
 
 > \>varName:some.path.in.the.output
 
@@ -94,7 +107,7 @@ Assuming a complex structure is returned by the function
 > $> echo $value
 > c
 
-### 2: Multiple Values
+### Multiple Values
 
 > \>varname(key1.path1,key2.path2)
 
