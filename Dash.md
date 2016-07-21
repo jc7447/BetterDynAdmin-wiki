@@ -73,7 +73,7 @@ Ex:
 
 *Note: For now the initial result is always prompted, even if you save to a variable - it's not a standard output like in a real shell.*
 
-### Result filtering
+## Result filtering
 
 You can save part of a result to a variable. There are two ways : either save a single value, or a set:
 
