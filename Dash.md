@@ -9,6 +9,7 @@ Table of Contents
       * [Console](#console)
       * [Editor](#editor)
     * [Component Reference:](#component-reference)
+     * [@This](#this)
     * [Saving a result to a variable](#saving-a-result-to-a-variable)
     * [Result filtering](#result-filtering)
       * [Single value:](#single-value)
@@ -71,6 +72,16 @@ You can test the value with an "echo" command:
 If a shortname refers to several component, ex: OR: OrderRepository and OtherRepository, you can select one of them by specifiying an index : @OR#0 or @OR#1.  
 
 To know the index, type the command *comprefs*. If you don't mention the index, you will be prompted with an error and the possible values
+
+### @this
+
+@this is a keyword that references the current component. 
+
+Ex:
+
+> $> set @this.loggingDebug true
+
+Avoid using it in scripts because the calling location might change
 
 ## Saving a result to a variable
 
