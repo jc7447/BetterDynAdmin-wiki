@@ -134,6 +134,62 @@ You can write that over several lines but you must keep the first "(" on the sam
 
 ## Functions
 
-* help : displays the list of all the functions and some quick tips
-* go : 
- * usage:  go /to/some/Component : redirects the user to this component page
+### help
+
+* displays the list of all the functions and some quick tips
+
+### history
+
+> $> history [clear]
+
+* Shows the command history
+* options:
+ * Clear: clears the history. This will also clear the persisted history and the console typeahead data source.
+
+### go
+
+> $>go /to/some/Component  
+> $>go @SHORT  
+> $>go $var
+ 
+ * Redirects the user to the component page
+
+### get
+> $>get /some/Component.property
+
+* Returns the value of Component.property
+
+### set
+> $>set /someComponent.property newvalue
+
+* Sets the value of Component.property to newvalue. Returns the property value after setting it to validate.
+
+### call
+> $>call /some/Component.method
+
+*Call the *method* method on component *Component*
+
+### print
+
+> $>print  /some/Repository itemDescriptor id
+
+* Runs a print-item xml query and returns the result
+
+### rql
+
+> $>rql /some/Repo {xmlStatement} [ [comma,separated,params] ]
+> $>rql /some/Repo.savedQuery [ [comma,separated,params]  ]
+
+*Note: the parameters are optionnal, and between []*
+
+* Runs an xml query on the repository and returns the result
+* The value between the { } can be split on several lines, but the { must be on the first and the } on the last
+* The form *Repo.saveQuery* allows to call a previously saved query. Use the [queries](#queries) function to display the queries of a repository.
+* The params will replace, in order, any token of form $N where N is a number.
+
+### queries
+
+> $>queries [/some/Repository]
+
+* Prints all the saved queries : name & content
+* If a repository is precised, only prints the queries of this repository
