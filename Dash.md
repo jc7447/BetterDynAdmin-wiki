@@ -9,12 +9,22 @@ Table of Contents
       * [Console](#console)
       * [Editor](#editor)
     * [Component Reference:](#component-reference)
-     * [@This](#this)
+      * [@this](#this)
     * [Saving a result to a variable](#saving-a-result-to-a-variable)
     * [Result filtering](#result-filtering)
       * [Single value:](#single-value)
       * [Multiple Values](#multiple-values)
     * [Functions](#functions)
+      * [help](#help)
+      * [history](#history)
+      * [go](#go)
+      * [get](#get)
+      * [set](#set)
+      * [call](#call)
+      * [print](#print)
+      * [rql](#rql)
+      * [queries](#queries)
+
 
 ## Start Dash
 
