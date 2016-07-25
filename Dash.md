@@ -1,44 +1,46 @@
 #DASH - DynAdmin SHell
 
+
 Table of Contents
 =================
 
-  * [DASH - DynAdmin SHell](#dash---dynadmin-shell)
-    * [Start Dash](#start-dash)
-    * [Navigation](#navigation)
-      * [Console](#console)
-      * [Editor](#editor)
-    * [Component Reference:](#component-reference)
-      * [@this](#this)
-    * [Saving a result to a variable](#saving-a-result-to-a-variable)
-    * [Result filtering](#result-filtering)
-      * [Single value:](#single-value)
-      * [Multiple Values](#multiple-values)
-    * [Functions](#functions)
-      * [help](#help)
-      * [history](#history)
-      * [go](#go)
-      * [get](#get)
-      * [set](#set)
-      * [call](#call)
-      * [print](#print)
-      * [rql](#rql)
-      * [queries](#queries)
+  * [Start Dash](#start-dash)
+  * [Navigation](#navigation)
+    * [Console](#console)
+    * [Editor](#editor)
+  * [Component Reference:](#component-reference)
+    * [@this](#this)
+  * [Saving a result to a variable](#saving-a-result-to-a-variable)
+  * [Result filtering](#result-filtering)
+    * [Single value:](#single-value)
+    * [Multiple Values](#multiple-values)
+  * [Functions](#functions)
+    * [help](#help)
+    * [history](#history)
+    * [go](#go)
+    * [get](#get)
+    * [set](#set)
+    * [call](#call)
+    * [print](#print)
+    * [rql](#rql)
+    * [queries](#queries)
+  * [Examples](#examples)
+    * [Mix of RQL &amp; variables saving](#mix-of-rql--variables-saving)
 
 
-## Start Dash
+# Start Dash
 
 * Open Dash by either:
  * Clicking on the Dash $ button in the menu
  * Using the "ctrl+alt+T" shortcut
 
-## Navigation
+# Navigation
 
 The modal is separated in 2 sections : the screen (A) and the input section.
 
 The input section has 2 modes : console & editor.
 
-### Console
+## Console
 
 ![Console Tab](https://raw.githubusercontent.com/jc7447/BetterDynAdmin/dev/resources/dash/dash.main.png)
 
@@ -53,7 +55,7 @@ The input section has 2 modes : console & editor.
 1. Clears the input
 1. Switch to editor mode
 
-### Editor
+## Editor
 
 ![Console Tab](https://raw.githubusercontent.com/jc7447/BetterDynAdmin/dev/resources/dash/dash.editor.png)
 
@@ -68,7 +70,7 @@ The input section has 2 modes : console & editor.
 1. Input for script name
 
 
-## Component Reference:
+# Component Reference:
 
 You can refer to a favorited component by using its short name, prefixed with **@**  
 
@@ -83,7 +85,7 @@ If a shortname refers to several component, ex: OR: OrderRepository and OtherRep
 
 To know the index, type the command *comprefs*. If you don't mention the index, you will be prompted with an error and the possible values
 
-### @this
+## @this
 
 @this is a keyword that references the current component. 
 
@@ -93,7 +95,7 @@ Ex:
 
 Avoid using it in scripts because the calling location might change
 
-## Saving a result to a variable
+# Saving a result to a variable
 
 You can save the output of a command to a variable, using ">varName". You can then later reference the value using "$varName"
 
@@ -107,11 +109,11 @@ Ex:
 
 *Note: For now the initial result is always prompted, even if you save to a variable - it's not a standard output like in a real shell.*
 
-## Result filtering
+# Result filtering
 
 You can save part of a result to a variable. There are two ways : either save a single value, or a set:
 
-### Single value:
+## Single value:
 
 > \>varName:some.path.in.the.output
 
@@ -128,7 +130,7 @@ Assuming a complex structure is returned by the function
 > $> echo $value
 > c
 
-### Multiple Values
+## Multiple Values
 
 > \>varname(key1.path1,key2.path2)
 
@@ -142,13 +144,13 @@ You can write that over several lines but you must keep the first "(" on the sam
 > $> echo $varname  
 > {skuId:"somevalue",parent:"parentValue"}
 
-## Functions
+# Functions
 
-### help
+## help
 
 * displays the list of all the functions and some quick tips
 
-### history
+## history
 
 > $> history [clear]
 
@@ -156,7 +158,7 @@ You can write that over several lines but you must keep the first "(" on the sam
 * options:
  * Clear: clears the history. This will also clear the persisted history and the console typeahead data source.
 
-### go
+## go
 
 > $>go /to/some/Component  
 > $>go @SHORT  
@@ -164,28 +166,28 @@ You can write that over several lines but you must keep the first "(" on the sam
  
  * Redirects the user to the component page
 
-### get
+## get
 > $>get /some/Component.property
 
 * Returns the value of Component.property
 
-### set
+## set
 > $>set /someComponent.property newvalue
 
 * Sets the value of Component.property to newvalue. Returns the property value after setting it to validate.
 
-### call
+## call
 > $>call /some/Component.method
 
 *Call the *method* method on component *Component*
 
-### print
+## print
 
 > $>print  /some/Repository itemDescriptor id
 
 * Runs a print-item xml query and returns the result
 
-### rql
+## rql
 
 > $>rql /some/Repo {xmlStatement} [ [comma,separated,params] ]
 > $>rql /some/Repo.savedQuery [ [comma,separated,params]  ]
@@ -197,9 +199,37 @@ You can write that over several lines but you must keep the first "(" on the sam
 * The form *Repo.saveQuery* allows to call a previously saved query. Use the [queries](#queries) function to display the queries of a repository.
 * The params will replace, in order, any token of form $N where N is a number.
 
-### queries
+## queries
 
 > $>queries [/some/Repository]
 
 * Prints all the saved queries : name & content
 * If a repository is precised, only prints the queries of this repository
+
+
+# Examples
+
+## Mix of RQL & variables saving
+
+*Queries have previously been saved in their respective repositories*
+
+> clear  
+>  
+> \#define variables  
+> echo -s pl123 >priceList  
+> echo -s sku123 >skuId  
+> echo -s img123 >invMgtUnit  
+>   
+> \#get sku infos  
+> print -s @PC sku $skuId >sku  
+> echo -s $sku:parentProducts >productId  
+> print  -s @PC product $productId >product  
+>   
+> rql -s @IR.pInventory [$invMgtUnit,$skuId] >stock:stockLevel  
+> rql -s @PL.pPrice [$priceList,$skuId] >price:listPrice  
+>   
+> \#print results  
+> echo $stock  
+> echo $price  
+> echo $sku:sellable  
+> echo $sku:cscSellable  
