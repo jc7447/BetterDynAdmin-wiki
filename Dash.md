@@ -1,6 +1,5 @@
 #DASH - DynAdmin SHell
 
-
 Table of Contents
 =================
 
@@ -14,6 +13,9 @@ Table of Contents
   * [Result filtering](#result-filtering)
     * [Single value:](#single-value)
     * [Multiple Values](#multiple-values)
+  * [Flags](#flags)
+    * [Global Flags](#global-flags)
+      * [-s : silent](#-s--silent)
   * [Functions](#functions)
     * [help](#help)
     * [history](#history)
@@ -24,6 +26,9 @@ Table of Contents
     * [print](#print)
     * [rql](#rql)
     * [queries](#queries)
+      * [queries list](#queries-list)
+      * [queries add](#queries-add)
+    * [fav](#fav)
   * [Examples](#examples)
     * [Mix of RQL &amp; variables saving](#mix-of-rql--variables-saving)
 
@@ -144,6 +149,22 @@ You can write that over several lines but you must keep the first "(" on the sam
 > $> echo $varname  
 > {skuId:"somevalue",parent:"parentValue"}
 
+# Flags
+
+The first parameter of a function can be a flag list :
+
+> $>function -abc [...]
+
+Will produce 3 flags a,b,c
+
+## Global Flags
+
+These flags are common to every function:
+
+### -s : silent
+
+To hide the output of a command, use the -s flag. Usefull when doing intermediate rql queries with long response.
+
 # Functions
 
 ## help
@@ -201,11 +222,24 @@ You can write that over several lines but you must keep the first "(" on the sam
 
 ## queries
 
-> $>queries [/some/Repository]
+### queries list
+
+> $>queries list [/some/Repository]
 
 * Prints all the saved queries : name & content
 * If a repository is precised, only prints the queries of this repository
 
+### queries add
+
+> $>queries add /some/Repo queryName {xmltext}
+
+Saves the query *xmlText* with name *queryName*
+
+## fav
+
+> $>fav /some/Component
+
+Creates a favorite for this component. Usefull to setup more complex scripts
 
 # Examples
 
