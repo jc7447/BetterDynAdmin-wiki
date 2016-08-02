@@ -137,7 +137,7 @@ Assuming a complex structure is returned by the function
 
 ## Multiple Values
 
-> \>varname(key1.path1,key2.path2)
+> \>varname(key1:path.nb.one,key2:path.nb.2)
 
 You can write that over several lines but you must keep the first "(" on the same line as the command
 
@@ -164,6 +164,10 @@ These flags are common to every function:
 ### -s : silent
 
 To hide the output of a command, use the -s flag. Usefull when doing intermediate rql queries with long response.
+
+### -k : skip history
+
+The command will not be added to the history. Mainly used to display the help at the start of the console.
 
 # Functions
 
@@ -219,6 +223,7 @@ To hide the output of a command, use the -s flag. Usefull when doing intermediat
 * The value between the { } can be split on several lines, but the { must be on the first and the } on the last
 * The form *Repo.saveQuery* allows to call a previously saved query. Use the [queries](#queries) function to display the queries of a repository.
 * The params will replace, in order, any token of form $N where N is a number.
+* See the examples for parametered queries
 
 ## queries
 
@@ -239,9 +244,54 @@ Saves the query *xmlText* with name *queryName*
 
 > $>fav /some/Component
 
-Creates a favorite for this component. Usefull to setup more complex scripts
+In order to shorten the command writing, add the repositories you use to the favorites, using the BetterDynAdmin toolbar.
+You can also do that in Dash using the *fav* function, so that you don't need to change page.
+
+If the component is already favorited, a warning will be raised, but it won't stop the script execution. 
+So it can be used at the start of every script, a bit like a *import* statement at the start of a piece of code.
+
+> fav /atg/commerce/order/OrderRepository  
+> print @OR order someId
 
 # Examples
+
+## Queries Add & Parametered Queries 
+
+You can create a parametered query either saving a query on the repository page, or use the *queries add* function.
+
+A query can be parameterized by using token of form *$ followed by a number (no spaces)*.
+
+Ex:
+
+> \<query-items item-descriptor="order"\>  
+> state=$0 and profileId=$1 range+1  
+> \</query-items\>
+
+To add it using the repository page, go to the repository page, write the xml text in the usual textbox, enter a name and click on save.
+
+To use the *queries add function*, do in Dash:
+
+> queries add /some/Repo queryName { xmlText }
+
+> queries add /atg/commerce/order/OrderRepository qOrderByStatusAndProfileId {  
+> \<query-items item-descriptor="order"\>  
+> state=$0 and profileId=$1 range+1  
+> \</query-items\>  
+> }
+
+Note that between { } you can write the text on several lines, but the first { must be on the first line of the dash command.
+
+Now that the query has been created, you can invoke it by:
+
+> rql /atg/commerce/order/OrderRepository qOrderByStatusAndProfileId [someState,someProfileId]
+
+You could as well have done
+
+> rql /atg/commerce/order/OrderRepository {  
+> \<query-items item-descriptor="order"\>  
+> state=$0 and profileId=$1 range+1  
+> \</query-items\>  
+> } [someState,someProfileId]
 
 ## Mix of RQL & variables saving
 
