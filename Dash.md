@@ -9,6 +9,7 @@ Table of Contents
     * [Editor](#editor)
   * [Component Reference:](#component-reference)
     * [@this](#this)
+  * [Escaping Key Symbols](#escaping-key-symbols)
   * [Saving a result to a variable](#saving-a-result-to-a-variable)
   * [Result filtering](#result-filtering)
     * [Single value:](#single-value)
@@ -100,6 +101,19 @@ Ex:
 
 Avoid using it in scripts because the calling location might change
 
+# Escaping Key Symbols
+
+Symbols such as #,@,$,\ have special meaning in DASH, so they must be escaped when used as values:
+
+There are 2 ways:
+* Either escape each symbol with a backslash:
+
+> $> set @this.email foo\@bar\\.com
+
+* Or enclose the value in double quotes. Double quotes inside the value must be escaped.
+
+> $> set @this.email "foo@bar.com"
+
 # Saving a result to a variable
 
 You can save the output of a command to a variable, using ">varName". You can then later reference the value using "$varName"
@@ -117,6 +131,8 @@ Ex:
 # Result filtering
 
 You can save part of a result to a variable. There are two ways : either save a single value, or a set:
+
+*Note: it's sometimes simpler to save the whole result to a variable, and then access part of it when needed. The full result is saved as a JS object*
 
 ## Single value:
 
