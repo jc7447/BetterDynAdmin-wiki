@@ -17,8 +17,10 @@ Table of Contents
   * [Flags](#flags)
     * [Global Flags](#global-flags)
       * [-s : silent](#-s--silent)
+  * [Cross Domain](#cross-domain)
   * [Functions](#functions)
     * [help](#help)
+    * [global](#global)
     * [history](#history)
     * [go](#go)
     * [get](#get)
@@ -185,11 +187,45 @@ To hide the output of a command, use the -s flag. Usefull when doing intermediat
 
 The command will not be added to the history. Mainly used to display the help at the start of the console.
 
+
+# Cross Domain
+
+Calls can be made to another dyn/admin. Used the [global](#global) function described bellow .
+
+> $>global domain "http://foobar.somedomain.com"
+
+The underyling dyn/admin configuration needs to accept cross-domain calls, it's not up to BDA.
+
 # Functions
 
 ## help
 
 * displays the list of all the functions and some quick tips
+
+## global
+
+Allows to set some global configuration:
+
+> $> global <optionName> <value>
+
+The available options are:
+
+* domain : use a different domain to do the ajax calls. Defaults to "" (current domain)
+
+<value> must be domain (+ port) + protocol :
+
+Ex:
+> $>global domain "http://foo.bar.com:38080"
+
+Given the presence of : and . characters, it's easier to escape the whole value with double quotes \".
+
+* silent : apply the -s silent flag to all calls.
+
+<value> must be true or false
+
+* verbose: apply the -v verbose flag to all calls.
+
+<value> must be true or false
 
 ## history
 
