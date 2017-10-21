@@ -1,0 +1,103 @@
+= Repositories
+:nofooter:
+
+The BetterDynAdmin Repository view comes with a lot of usefull functionalities:
+
+== Query box
+
+.Query Box
+[caption="Figure 1:"]
+image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/OrderRepository-QueryBox.png[Query box]
+
+As you can see here there are:
+
+. on top:
+.. _a dropdown_ with 'add-item' in it, where you can choose the action you want to add in the *query box* (print-item, query-item, remove-item, add-item, update-item, query-item ALL or query-item last 10)
+.. _a dropdown_ with 'order', where you can choose the Repository Item you want to query
+.. _add button_ to add the Action to the *query box*
+.. _a add and enter_ to add the Action to the *query box* and execute the query
+. on the right:
+.. _a tab_ with the properties of the current selected Repository Item
+.. _a tab_ for the stored queries
+. on the buttom:
+.. _a clear button_ to empty the *query box*
+.. _a enter button_ to execute the queries
+.. _a text zone with a save button_ to save the query in the Stored Query
+
+Some additional features have been added to like:
+
+- coloring syntax
+- auto-complete
+- add the set-property when click on a property name in the Properties tab
+- when print-item, update-item or remove-item is selected, you can enter the Item id
+- id-only on the query-item
+
+The result of the query is displayed as HTML colored tables.
+
+== Stored query
+
+.Stored queries
+[caption="Figure 2:"]
+image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/OrderRepository-StoredQueries.png[Store queries]
+
+With this tab you can call back a query saved before. If you put your mouse over the eye you can see a preview of the query.
+
+== Repository Items properties
+
+.Item properties
+[caption="Figure 3:"]
+image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/OrderRepository-RepositoryItemsProperties.png[Items properties]
+
+In these tables you have all the Repository Items available in the current Repository. You can:
+
+- display on a detailed table all the Item properties.
+
+.Repository Items properties
+[caption="Figure 4:"]
+image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/OrderRepository-RepositoryItemProperties.png[Repository Item properties]
+
+- display the named queries associated with the item in the Repository definition file.
+- enable / disable the Debug for a full Repository item
+- enable / disable the Debug for a specific Repository Item Property
+
+.Debug Specific Repository Item Property
+[caption="Figure 5:"]
+image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/OrderRepository-DebugRepositoryItemProperty.png[Debug Repository Item property]
+
+== Item Tree
+
+Reprository Items can be linked together in their definition. If so, you can use the Repository Item Tree to view the Item properties values and all the linked items properties values.
+There are multiple ways of using the Item Tree. In the following screenshot you can view the list
+
+.Item Tree possibilities
+[caption="Figure 6:"]
+image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/OrderRepository-ItemTreePossibilities.png[Item tree possibilities]
+
+Here are some sample of what it can do:
+
+.Item tree as HTML tables
+[caption="Figure 7:"]
+image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/OrderRepository-ItemTreeHTML.png[Item tree as HTML tables]
+
+.Item Tree as <add-item>
+[caption="Figure 8:"]
+image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/OrderRepository-ItemTreeAddItem.png[Item tree as <add-items>]
+
+.Item Tree as SVG Tree
+[caption="Figure 9:"]
+image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/OrderRepository-ItemTree-SVG.png[Item tree as SVG Tree]
+
+== Cache usage
+
+.Cache usage
+[caption="Figure 10:"]
+image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/OrderRepository-CacheUsage.png[Cache usage]
+
+== Hiding
+
+As you can see on the previous screenshot there is a label *Show less...* after the *Cache usage statistics*. When clicking on it the all bloc disapear and the label is replaced by *Show more...*
+
+.Hiding bloc
+[caption="Figure 11:Hiding bloc"]
+image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/OrderRepository-Hiding.png[Hiding bloc]
+
