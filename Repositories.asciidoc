@@ -1,12 +1,40 @@
 = Repositories
+:toc:
 :nofooter:
 
 The BetterDynAdmin Repository view comes with a lot of usefull functionalities:
 
+* featurefull query box
+* HTML table item view
+* in place item properties update
+* nice design
+
+== HTML Item view
+
+.HTML Item view
+[caption="Figure 1: "]
+image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/OrderRepository-HTMLRepositoryItemView.png[HTML Item view]
+
+. A *Show raw XML* link over the tables allows you to view the old-fashion add-items.
+. For readability purpose, if the value length of a property is bigger than 100 caracters, the text is hidden and "..." is added to show it. A *Show full text* link over the tables allows you to view the hidden part.
+. When an item is linked to an other item, a <<HtmlViewLink, link>> is created to generate the print-item, add it to the <<Query box,query box>> and eventually execute the query if the *Add and reload* is clicked. 
+. If a value is updatable, you can click on the *pen icon* in front of the value. Then you can update it and on leaving the <<HtmlViewUpdate, update textbox>> an update-item is sent to the server if you click *Ok* on the confirm popup.
+
+[#HtmlViewLink]
+.HTML Item view link
+[caption="Figure 2: "]
+image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/OrderRepository-AddAndReload.png[HTML Item view link]
+
+[#HtmlViewUpdate]
+.HTML Item view update
+[caption="Figure 3: "]
+image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/OrderRepository-UpdateItem.png[HTML Item view update]
+
+[#Query box]
 == Query box
 
 .Query Box
-[caption="Figure 1:"]
+[caption="Figure 4: "]
 image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/OrderRepository-QueryBox.png[Query box]
 
 As you can see here there are:
@@ -26,7 +54,7 @@ As you can see here there are:
 
 Some additional features have been added to like:
 
-- coloring syntax
+- syntax highliting
 - auto-complete
 - add the set-property when click on a property name in the Properties tab
 - when print-item, update-item or remove-item is selected, you can enter the Item id
@@ -37,15 +65,19 @@ The result of the query is displayed as HTML colored tables.
 == Stored query
 
 .Stored queries
-[caption="Figure 2:"]
+[caption="Figure 5: "]
 image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/OrderRepository-StoredQueries.png[Store queries]
 
 With this tab you can call back a query saved before. If you put your mouse over the eye you can see a preview of the query.
 
+.Stored query preview
+[caption="Figure 6: "]
+image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/OrderRepository-StoredQueries.png[Store Query preview]
+
 == Repository Items properties
 
 .Item properties
-[caption="Figure 3:"]
+[caption="Figure 7: "]
 image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/OrderRepository-RepositoryItemsProperties.png[Items properties]
 
 In these tables you have all the Repository Items available in the current Repository. You can:
@@ -53,7 +85,7 @@ In these tables you have all the Repository Items available in the current Repos
 - display on a detailed table all the Item properties.
 
 .Repository Items properties
-[caption="Figure 4:"]
+[caption="Figure 8: "]
 image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/OrderRepository-RepositoryItemProperties.png[Repository Item properties]
 
 - display the named queries associated with the item in the Repository definition file.
@@ -61,7 +93,7 @@ image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/
 - enable / disable the Debug for a specific Repository Item Property
 
 .Debug Specific Repository Item Property
-[caption="Figure 5:"]
+[caption="Figure 9: "]
 image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/OrderRepository-DebugRepositoryItemProperty.png[Debug Repository Item property]
 
 == Item Tree
@@ -70,27 +102,32 @@ Reprository Items can be linked together in their definition. If so, you can use
 There are multiple ways of using the Item Tree. In the following screenshot you can view the list
 
 .Item Tree possibilities
-[caption="Figure 6:"]
+[caption="Figure 10: "]
 image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/OrderRepository-ItemTreePossibilities.png[Item tree possibilities]
 
 Here are some sample of what it can do:
 
 .Item tree as HTML tables
-[caption="Figure 7:"]
+[caption="Figure 11: "]
 image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/OrderRepository-ItemTreeHTML.png[Item tree as HTML tables]
 
+[NOTE]
+==== 
+In the right panel, you have a shortcut to the repository items grouped by types
+====
+
 .Item Tree as <add-item>
-[caption="Figure 8:"]
+[caption="Figure 12: "]
 image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/OrderRepository-ItemTreeAddItem.png[Item tree as <add-items>]
 
 .Item Tree as SVG Tree
-[caption="Figure 9:"]
+[caption="Figure 13: "]
 image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/OrderRepository-ItemTree-SVG.png[Item tree as SVG Tree]
 
 == Cache usage
 
 .Cache usage
-[caption="Figure 10:"]
+[caption="Figure 14: "]
 image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/OrderRepository-CacheUsage.png[Cache usage]
 
 == Hiding
@@ -98,6 +135,47 @@ image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/
 As you can see on the previous screenshot there is a label *Show less...* after the *Cache usage statistics*. When clicking on it the all bloc disapear and the label is replaced by *Show more...*
 
 .Hiding bloc
-[caption="Figure 11:Hiding bloc"]
+[caption="Figure 15: "]
 image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/OrderRepository-Hiding.png[Hiding bloc]
 
+== Repository Definition
+
+=== XML View
+
+The XML view allows you to see the Repository Definition with higlighted XML and properly indented.
+
+.XML Repository Definition
+[caption="Figure 17: "]
+image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/OrderRepository-RepositoryDefinitionXML.png[XML Repository Definition]
+
+=== Table View
+
+In this view accessible by clicking on the *Display as table* button. 
+
+.Table Repository Definition
+[caption="Figure 16: "]
+image::https://github.com/jc7447/BetterDynAdmin/raw/master/resources/repository/OrderRepository-RepositoryDefinition.png[Table Repository Definition]
+
+As you can see on this screenshot there is a *Quick Navigation* table on the right. In this table you are able to: 
+
+* click on the name of the Item and the page is scrolled to the definition of this item
+* sort the Quick View alphabetically
+* go to the XML definition
+* go to the first item of the table view
+* filter the items in the Quick View
+
+In the Item Definition Table View (on the right), you can easily view:
+
+* Item:
+** Item name
+** Sub-type property
+** Super-type item
+** cache-mode
+** cache timeout
+* Table:
+** Name
+** type
+** id-column-name
+* Properties
+** link to Item Property definition if a property is of Item type
+** View the enumerated values in a popup on mouse over the *Enumerated* keyword
