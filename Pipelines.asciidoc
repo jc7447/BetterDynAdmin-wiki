@@ -1,0 +1,4 @@
+= Pipelines
+ifdef::env-github,env-browser[:outfilesuffix: .asciidoc]
+:nofooter:
+

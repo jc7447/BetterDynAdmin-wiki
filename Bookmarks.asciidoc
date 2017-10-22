@@ -1,4 +1,5 @@
 = Bookmarks
+ifdef::env-github,env-browser[:outfilesuffix: .asciidoc]
 :nofooter:
 
 == Adding a bookmark:

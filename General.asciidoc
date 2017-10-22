@@ -1,0 +1,83 @@
+= General Features
+:toc:
+ifdef::env-github,env-browser[:outfilesuffix: .asciidoc]
+:nofooter:
+
+== XML
+
+XML Highlighting
+
+.XML Highlighting
+[caption="Figure 1: "]
+image::https://github.com/jc7447/BetterDynAdmin-wiki/raw/master/resources/general/XmlHighlighting.png[XML Highlighting]
+
+== Easy copy
+
+Easy copy Component Name and Component Implementation class
+
+.Easy Copy
+[caption="Figure 2: "]
+image::https://github.com/jc7447/BetterDynAdmin-wiki/raw/master/resources/general/Component-EasyCopy.png[Easy Copy]
+
+<1> Copy the Component path
+<2> Copy the Component class
+
+== Menu
+
+In the top right hand corner, BDA adds a menu. In this menu you can find some usefull fonctionalities such as:
+
+* Quick Search with autocomplete
+* See what's New in this version
+* Configure the BDA options
+* Backup & Restore your configuration (like Bookmarks)
+* Common information available on About
+
+.Menu
+[caption="Figure 3: "]
+image::https://github.com/jc7447/BetterDynAdmin-wiki/raw/master/resources/general/BDAMenus.png[About]
+
+=== Search
+
+.Search
+[caption="Figure 4: "]
+image::https://github.com/jc7447/BetterDynAdmin-wiki/raw/master/resources/general/MenuSearch.png[Search]
+
+When Searching for a component, the list of matching components appear in the list below.
+
+=== What's New
+
+.What's New
+[caption="Figure 5: "]
+image::https://github.com/jc7447/BetterDynAdmin-wiki/raw/master/resources/general/MenuWhatsNew.png[What's New]
+
+Here you'll see the last part of the Release Note.
+
+=== Configuration
+
+.Configuration
+[caption="Figure 6: "]
+image::https://github.com/jc7447/BetterDynAdmin-wiki/raw/master/resources/general/MenuConfiguration.png[Configuration]
+
+. *Use the same bda on every domains*: all the shortcuts and configuration are stored in a cookie. By default the cookie is only available for the current DNS name.
+Checking this box will make the cookie available for all DNS name.
+. *Search AutoComplete*: when this option is enabled, you just need to start typing in the Component Search Box and the possibilities appear in the popup below the component search box.
+. *XMLDef as default*: this will display the table like view in the Repository Definition with the Quick View table links on the left.
+. *Default methods for Bookmarks*: all the methods in this field will be added by default in the Bookmarks (logginDebug ...). You will just have to click on the Bookmark Shortcut link to invoke them.
+. *Edit tags*: list of the tags used to group the Bookmarks. You can edit these tags mainly to rename them.
+. *Folders JDBC Datasource*:  ??????
+
+=== Backup
+
+.Backup
+[caption="Figure 7: "]
+image::https://github.com/jc7447/BetterDynAdmin-wiki/raw/master/resources/general/MenuBackup.png[Backup]
+
+This feature allows you to retreive the BDA configuration as JSon, modify it and them re-import them on the same environement / browser or not.
+
+=== About
+
+.About
+[caption="Figure 8: "]
+image::https://github.com/jc7447/BetterDynAdmin-wiki/raw/master/resources/general/MenuAbout.png[About]
+
+Last news from the release notes.
