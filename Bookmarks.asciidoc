@@ -1,6 +1,13 @@
 = Bookmarks
-ifdef::env-github,env-browser[:outfilesuffix: .asciidoc]
-:nofooter:
+ifndef::env-github[]
+:toc: left
+:outfilesuffix: .html
+endif::[]
+ifdef::env-github[]
+:toc:
+:toclevels: 1
+:imagesdir: https://github.com/jc7447/BetterDynAdmin-wiki/raw/master/
+endif::[]
 
 == Adding a bookmark:
 

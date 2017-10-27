@@ -1,6 +1,7 @@
 = General Features
 ifndef::env-github[]
 :toc: left
+:outfilesuffix: .html
 endif::[]
 ifdef::env-github[]
 :toc:

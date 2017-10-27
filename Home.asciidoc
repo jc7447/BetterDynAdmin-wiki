@@ -1,5 +1,7 @@
 = Welcome to the BetterDynAdmin wiki!
-ifdef::env-github,env-browser[:outfilesuffix: .asciidoc]
+ifndef::env-github[]
+:outfilesuffix: .html
+endif::[]
 :nofooter:
 
 == Installation
