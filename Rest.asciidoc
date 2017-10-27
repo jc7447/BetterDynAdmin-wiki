@@ -1,0 +1,4 @@
+= Rest MVC Services
+ifdef::env-github,env-browser[:outfilesuffix: .asciidoc]
+:nofooter:
+

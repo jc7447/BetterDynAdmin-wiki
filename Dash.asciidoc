@@ -16,7 +16,7 @@ The input section has 2 modes : console & editor.
 
 === Console
 
-image::https://raw.githubusercontent.com/jc7447/BetterDynAdmin/dev/resources/dash/dash.main.png[Console Tab]
+image::https://github.com/jc7447/BetterDynAdmin-wiki/raw/resources/dash/dash.main.png[Console Tab]
 
 - A : The commands results are displayed here.
 
@@ -31,7 +31,7 @@ image::https://raw.githubusercontent.com/jc7447/BetterDynAdmin/dev/resources/das
 
 === Editor
 
-image::https://raw.githubusercontent.com/jc7447/BetterDynAdmin/dev/resources/dash/dash.editor.png[Console Tab]
+image::https://github.com/jc7447/BetterDynAdmin-wiki/raw/resources/dash/dash.editor.png[Console Tab]
 
 ** A : Editor input zone
 

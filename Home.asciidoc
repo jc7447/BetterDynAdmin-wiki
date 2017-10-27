@@ -20,13 +20,16 @@ If you're not happy with BDA behaviour, you can simply disable it by clicking on
 * Accept installation 
 * Enjoy :)
 
-== Global Features
+== Features
+
+=== link:General{outfilesuffix}[General Features]
+
 === link:Bookmarks{outfilesuffix}[Bookmarks]
 
-== link:Repositories{outfilesuffix}[Repositories]
+=== link:Repositories{outfilesuffix}[Repositories]
 
-== Rest MVC Services
+=== link:Rest{outfilesuffix}[Rest MVC Services]
 
-== Pipelines
+=== link:Pipelines{outfilesuffix}[Pipelines]
 
-== link:Dash{outfilesuffix}[Dash]
+=== link:Dash{outfilesuffix}[Dash]
