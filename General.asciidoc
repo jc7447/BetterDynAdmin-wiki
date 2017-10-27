@@ -1,6 +1,12 @@
 = General Features
+ifndef::env-github[]
+:toc: left
+endif::[]
+ifdef::env-github[]
 :toc:
-ifdef::env-github,env-browser[:outfilesuffix: .asciidoc]
+:toclevels: 1
+:imagesdir: https://github.com/jc7447/BetterDynAdmin-wiki/raw/master/
+endif::[]
 :nofooter:
 
 == XML
@@ -9,7 +15,7 @@ XML Highlighting
 
 .XML Highlighting
 [caption="Figure 1: "]
-image::https://github.com/jc7447/BetterDynAdmin-wiki/raw/master/resources/general/XmlHighlighting.png[XML Highlighting]
+image::resources/general/XmlHighlighting.png[XML Highlighting]
 
 == Easy copy
 
@@ -17,7 +23,7 @@ Easy copy Component Name and Component Implementation class
 
 .Easy Copy
 [caption="Figure 2: "]
-image::https://github.com/jc7447/BetterDynAdmin-wiki/raw/master/resources/general/Component-EasyCopy.png[Easy Copy]
+image::resources/general/Component-EasyCopy.png[Easy Copy]
 
 <1> Copy the Component path
 <2> Copy the Component class
@@ -34,13 +40,13 @@ In the top right hand corner, BDA adds a menu. In this menu you can find some us
 
 .Menu
 [caption="Figure 3: "]
-image::https://github.com/jc7447/BetterDynAdmin-wiki/raw/master/resources/general/BDAMenus.png[About]
+image::resources/general/BDAMenus.png[About]
 
 === Search
 
 .Search
 [caption="Figure 4: "]
-image::https://github.com/jc7447/BetterDynAdmin-wiki/raw/master/resources/general/MenuSearch.png[Search]
+image::resources/general/MenuSearch.png[Search]
 
 When Searching for a component, the list of matching components appear in the list below.
 
@@ -48,7 +54,7 @@ When Searching for a component, the list of matching components appear in the li
 
 .What's New
 [caption="Figure 5: "]
-image::https://github.com/jc7447/BetterDynAdmin-wiki/raw/master/resources/general/MenuWhatsNew.png[What's New]
+image::resources/general/MenuWhatsNew.png[What's New]
 
 Here you'll see the last part of the Release Note.
 
@@ -56,7 +62,7 @@ Here you'll see the last part of the Release Note.
 
 .Configuration
 [caption="Figure 6: "]
-image::https://github.com/jc7447/BetterDynAdmin-wiki/raw/master/resources/general/MenuConfiguration.png[Configuration]
+image::resources/general/MenuConfiguration.png[Configuration]
 
 . *Use the same bda on every domains*: all the shortcuts and configuration are stored in a cookie. By default the cookie is only available for the current DNS name.
 Checking this box will make the cookie available for all DNS name.
@@ -70,7 +76,7 @@ Checking this box will make the cookie available for all DNS name.
 
 .Backup
 [caption="Figure 7: "]
-image::https://github.com/jc7447/BetterDynAdmin-wiki/raw/master/resources/general/MenuBackup.png[Backup]
+image::resources/general/MenuBackup.png[Backup]
 
 This feature allows you to retreive the BDA configuration as JSon, modify it and them re-import them on the same environement / browser or not.
 
@@ -78,6 +84,6 @@ This feature allows you to retreive the BDA configuration as JSon, modify it and
 
 .About
 [caption="Figure 8: "]
-image::https://github.com/jc7447/BetterDynAdmin-wiki/raw/master/resources/general/MenuAbout.png[About]
+image::resources/general/MenuAbout.png[About]
 
 Last news from the release notes.

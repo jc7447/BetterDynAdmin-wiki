@@ -1,5 +1,12 @@
 = #DASH - DynAdmin SHell
+ifndef::env-github[]
+:toc: left
+endif::[]
+ifdef::env-github[]
 :toc:
+:toclevels: 1
+:imagesdir: https://github.com/jc7447/BetterDynAdmin-wiki/raw/master/
+endif::[]
 :nofooter:
 
 == Start Dash
@@ -16,7 +23,7 @@ The input section has 2 modes : console & editor.
 
 === Console
 
-image::https://github.com/jc7447/BetterDynAdmin-wiki/raw/master/resources/dash/dash.main.png[Console Tab]
+image::resources/dash/dash.main.png[Console Tab]
 
 - A : The commands results are displayed here.
 
@@ -30,7 +37,7 @@ image::https://github.com/jc7447/BetterDynAdmin-wiki/raw/master/resources/dash/d
 . Switch to editor mode
 
 === Editor
-image::https://github.com/jc7447/BetterDynAdmin-wiki/raw/master/resources/dash/dash.editor.png[Console Tab]
+image::resources/dash/dash.editor.png[Console Tab]
 
 ** A : Editor input zone
 
