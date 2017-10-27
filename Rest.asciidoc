@@ -1,4 +1,12 @@
 = Rest MVC Services
 ifdef::env-github,env-browser[:outfilesuffix: .asciidoc]
+ifndef::env-github[]
+:toc: left
+endif::[]
+ifdef::env-github[]
+:toc:
+:toclevels: 1
+:imagesdir: https://github.com/jc7447/BetterDynAdmin-wiki/raw/master/
+endif::[]
 :nofooter:
 
