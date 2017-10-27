@@ -116,6 +116,11 @@ image::https://github.com/jc7447/BetterDynAdmin-wiki/raw/master/resources/reposi
 In the right panel, you have a shortcut to the repository items grouped by types
 ====
 
+[NOTE]
+==== 
+In the right panel, you have a shortcut to the repository items grouped by types
+====
+
 .Item Tree as <add-item>
 [caption="Figure 12: "]
 image::https://github.com/jc7447/BetterDynAdmin-wiki/raw/master/resources/repository/OrderRepository-ItemTreeAddItem.png[Item tree as <add-items>]
