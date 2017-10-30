@@ -10,3 +10,4 @@ ifdef::env-github[]
 endif::[]
 :nofooter:
 
+test
