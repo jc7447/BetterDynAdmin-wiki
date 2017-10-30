@@ -1,0 +1,15 @@
+script:
+- |
+  git config user.name "Jean-Charles Manoury"
+  git config user.email "jc.manoury@gmail.com"
+  git remote remove origin
+  git remote add origin https://$GITHUB_API_KEY@github.com/jc7447/BetterDynAdmin-wiki.git > /dev/null 2>&1
+  git remote add upstream https://$GITHUB_API_KEY@github.com/jc7447/BetterDynAdmin.wiki.git > /dev/null 2>&1
+  git fetch origin
+  git fetch upstream
+  git merge upstream/master --no-edit
+  git push origin HEAD:master > /dev/null 2>&1
+  git push upstream HEAD:master > /dev/null 2>&1
+env:
+  matrix:
+    secure: ouF+rWXHpqbrexCfygeffbqAOpivlzJXzMm2Y5LHEhhTgEUC0vVEpV463H6aYldPZao/s6JpAyN0p9qskYSpUDOh+Udth5rwHnTgHhm1WvwYGPXt64EUgFeJNwCWcRO3X5vaCq5+EmFemhIwpxAbUTxrcuZvFdFZYZJoU2dMU1O4LP4gjydBH5eaIYQ+JDmnY7uIBYBqgnKnZCASy9En9KsPdYTGb4IDtioQlzBz0OfBwQ38xKlk43BqYyG5MrTkHvlMNI35aZjfHVb4DRfIbYnUW/i+mvxq6OgquYv6pJfAlpLylBqq3kfpt7cmD+D3o6UfgMVQhMfqSNa9Y2u8cZoBuvjQG4TGM3Sz2pMjZJPNOpQXyDl0YPf/5VGM8n2adij5uIgoszCcuqFr3OldKqpeglKkb7Qv8GzssWb0PTtZ9qauuktzpU8F8sxwYDwbYk1Li5k7o+oQE0fJ+NS6d/wwVT4b6kwRMHsgsADRbApFSza8Jf6cjQ2MTxuJTUqe2IaDmQxvViZU3TW7RkryQItYpP4ZkjzxnbI4jy/Y/FsZjJIB+lSpi73vUn4u2yLlng8Z6201zdheQ1GIhfHW8zdtAIFtvuEz39aUsXJ4N26AvvT6bRABMCrOp0518b4BuBMqfhwTsHXmP/y88g5/axGQ3B+K81xwaelnXTzaKhM=
