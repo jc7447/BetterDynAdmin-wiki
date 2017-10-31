@@ -1,0 +1,1 @@
+To Conbritue to this Wiki you can submit pull-request to [BetterDynAdmin-wiki](https://github.com/jc7447/BetterDynAdmin-wiki) repository
