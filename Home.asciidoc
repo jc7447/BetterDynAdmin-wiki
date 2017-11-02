@@ -2,6 +2,9 @@
 ifndef::env-github[]
 :outfilesuffix: .html
 endif::[]
+ifdef::env-github[]
+:outfilesuffix: 
+endif::[]
 :nofooter:
 
 == Installation
