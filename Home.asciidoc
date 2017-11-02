@@ -1,9 +1,9 @@
 = Welcome to the BetterDynAdmin wiki!
 ifndef::env-github[]
-:outfilesuffix: .html
+:ext-relative: {outfilesuffix}
 endif::[]
 ifdef::env-github[]
-:outfilesuffix: 
+:ext-relative:
 endif::[]
 :nofooter:
 
@@ -27,14 +27,14 @@ If you're not happy with BDA behaviour, you can simply disable it by clicking on
 
 == Features
 
-=== link:General{outfilesuffix}[General Features]
+=== link:General{ext-relative}[General Features]
 
-=== link:Bookmarks{outfilesuffix}[Bookmarks]
+=== link:Bookmarks{ext-relative}[Bookmarks]
 
-=== link:Repositories{outfilesuffix}[Repositories]
+=== link:Repositories{ext-relative}[Repositories]
 
-=== link:Rest{outfilesuffix}[Rest MVC Services]
+=== link:Rest{ext-relative}[Rest MVC Services]
 
-=== link:Pipelines{outfilesuffix}[Pipelines]
+=== link:Pipelines{ext-relative}[Pipelines]
 
-=== link:Dash{outfilesuffix}[Dash]
+=== link:Dash{ext-relative}[Dash]
